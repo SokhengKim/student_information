@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS attendance (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    date DATE NOT NULL,
+    student_id INTEGER NOT NULL
+);

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+</head>
+<body>
+    <style>
+    body {
+        min-height: 100vh;
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+ 
+        
+    }
+    .whole-part {
+        box-shadow: 5px 5px 18px 18px gray;
+        width: 600px;
+        height: 500px;
+        backdrop-filter: blur(10px);
+        background-color: #DEEEDF;
+        border-radius: 8px;
+        
+    }
+    .header {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+   
+    .student-container {
+        display: flex;
+        flex-direction: row; 
+        width: 600px; 
+        height: 300px;
+        padding-top: 30px;
+
+        
+        
+    }
+
+    .left-place {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; 
+        width: 600px;
+        font-size: 20px;
+        margin-left: 50px;
+             
+    }
+    .right-place {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        align-items: flex-start; 
+        width: 600px;
+        font-size: 20px;   
+        
+    }
+    .btn-back {
+        border: 4px solid;
+        
+        
+    }
+    </style>
+    
+
+
+
+<div class="whole-part">
+    
+       
+
+    <div class='header'>
+        <button 
+        style="
+        position: fixed;
+        left: 5px;
+        top: 5px;
+        border: none;
+        width: 50px; height: 20px;
+        background-color: #DEEEDF; border-radius: 6px; 
+        box-shadow: 2px 2px 10px gray;"> 
+    
+            <a href="{{ url_for('home') }}" style="text-decoration: none; color: black;">Back</a>
+
+        </button>
+   
+    <h1>Mark Attendance</h1>
+    </div>
+
+<form action="{{ url_for('mark_attendance') }}" method="post">
+    <div style="display: flex; flex-direction: row; align-items: center;">
+    <label for="date" style="margin-left: 50px;">Date: </label>
+    <input type="date" id="date" name="date" required><br> 
+    </div>
+    <div class="student-container">    
+        <div class="left-place">
+        
+        
+        <div style="display: flex; flex-direction: row;  align-items: center;">
+        <input type="checkbox" id="student1" name="student_ids" value="Chen Pisal">
+        <label for="Chen Pisal">1. Chen Pisal</label><br><br>
+        </div>
+
+        <div style="display: flex; flex-direction: row;  align-items: center;">
+        <input type="checkbox" id="student2" name="student_ids" value="Pheakdey">
+        <label for="Pheakdey">2. Pheakdey</label><br><br>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center;">
+        <input type="checkbox" id="student3" name="student_ids" value="Rin Vireak">
+        <label for="Rin Vireak">3. Rin Vireak</label><br><br>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center;">
+        <input type="checkbox" id="student4" name="student_ids" value="Mongkol">
+        <label for="Mongkol">4. Mongkol</label><br><br>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center;">
+        <input type="checkbox" id="student5" name="student_ids" value="Kim Sokheng">
+        <label for="Kim Sokheng">5. Kim Sokheng</label><br><br>
+        </div>
+    </div>
+
+        <div class="right-place">
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+            <input type="checkbox" id="student6" name="student_ids" value="Hong Ra">
+            <label for="Hong Ra">6. Hong Ra</label><br><br>
+            </div>
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+            <input type="checkbox" id="student7" name="student_ids" value="Rachana">
+            <label for="Rachana">7. Rachana</label><br><br>
+            </div>
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+            <input type="checkbox" id="student8" name="student_ids" value="Chenda">
+            <label for="Chenda">8. Chenda</label><br><br>
+            </div>
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+            <input type="checkbox" id="student9" name="student_ids" value="Tep Puthearin">
+            <label for="Tep Puthearin">9. Tep Puthearin</label><br><br>
+            </div>
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+            <input type="checkbox" id="student10" name="student_ids" value="Meng Heang">
+            <label for="Meng Heang">10. Meng Heang</label><br><br>
+            </div>
+    </div>
+
+        <!-- Add more checkboxes for other students -->
+
+    </div>
+    <input style="width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 4px 0.5px black;
+    background-color: #DEEEDF;
+    margin-left: 40px;
+    margin-left: 34%;
+    color: black;
+    font-size: 18px;" type="submit" value="Submit">
+</form>
+</div>
+</div>
+
+
+</body>
+</html>

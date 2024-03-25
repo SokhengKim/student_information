@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance</title>
+</head>
+<body>
+<style>
+
+body {
+        display: flex;
+        height: 80vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+.space-available {
+    display: flex;
+    flex-direction: column;
+    background-color: #DEEEDF;
+    width: 400px;
+    height: 400px;
+    box-shadow: 5px 5px 18px 18px gray;
+    
+   
+}
+</style>
+
+
+    <form action="{{ url_for('view_attendance') }}" method="post">
+
+        <div class="space-available"> 
+            <div style="display: grid; grid-template-columns: 50px 1fr;">    
+                    <button style="width: 40px; height: 40px; border: none;
+                    width: 50px; height: 20px;
+                    background-color: #DEEEDF; border-radius: 4px; 
+                    box-shadow: 1px 1px 5px 1px gray; margin-top: 5px; margin-left: 5px;">
+                        <a href="{{ url_for('home') }}" style="text-decoration: none; color: black;">Back</a>
+                    </button>
+                    <h1 style=" margin-top: 50px;">View Attendance</h1>
+                </div>
+
+                <div style="margin-top: 20px; font-size: 18px; margin-left: 40px;" >
+
+                    <label for="date">Enter date: </label>
+                    <input type="date" id="date" name="date" required>
+                    <input type="submit" value="View">
+                </div>
+        </div>
+                
+    </form>
+
+
+</body>
+</html>
